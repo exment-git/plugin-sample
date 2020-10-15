@@ -1,0 +1,9 @@
+{
+    "uuid": "e2c18434-4dd6-4146-aa15-3b8003d4a77a",
+    "plugin_name": "ReplaceZenHan",
+    "plugin_view_name": "全角半角変換",
+    "description": "全角の英数字を半角に置き換えます。",
+    "author":  "Kajitori",
+    "version": "1.0.1",
+    "plugin_type": "script"
+}
