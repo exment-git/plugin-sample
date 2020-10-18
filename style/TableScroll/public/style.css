@@ -1,0 +1,4 @@
+.block_custom_value_grid .table-responsive{
+    overflow-y:auto;
+    max-height:450px;
+}
