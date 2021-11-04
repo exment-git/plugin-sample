@@ -10,11 +10,11 @@ class Plugin extends PluginValidatorBase
     public function validate()
     {
         // 入力値を取得する
-        $priority = array_get($this->input_value, 'priority');
+        $priority = array_get($this->input_value, 'order');
 
-        if ($priority < 100) {
+        if ($priority > 100) {
             // エラーメッセージを設定する（キー：列名、値：メッセージ）
-            $this->messages['priority'] = '100以上の値を重要度には入れてください！';
+            $this->messages['order'] = '表示順には100以下の数値を入れてください！';
             // 戻り値にfalse（エラー発生）を返す
             return false;
         }
