@@ -1,0 +1,11 @@
+{
+    "plugin_name": "PluginSyncCity",
+    "uuid": "539a04f5-aee2-cb63-326e-ea1e1a922d6f",
+    "plugin_view_name": "Plugin Event",
+    "description": "都市データの情報を外部データベースと連携します。",
+    "author": "(Your Name)",
+    "version": "1.0.0",
+    "target_tables": "city",
+    "plugin_type": "event",
+    "event_triggers": "saved"
+}
