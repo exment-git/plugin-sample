@@ -1,0 +1,32 @@
+{
+    "plugin_name": "YouTubeSearch",
+    "plugin_view_name" : "YouTube検索",
+    "explain": "YouTubeを検索し、再生数などをデータ保存します。",
+    "uuid":  "c6d8daa0-c255-11e9-bb97-0800200c9a66",
+    "author":  "(Your Name)",
+    "version": "1.0.0",
+    "plugin_type": "page",
+    "route": [
+        {
+            "uri": "",
+            "method": [
+                "get"
+            ],
+            "function": "index"
+        },
+        {
+            "uri": "list",
+            "method": [
+                "get"
+            ],
+            "function": "list"
+        },
+        {
+            "uri": "save",
+            "method": [
+                "post"
+            ],
+            "function": "save"
+        }
+    ]
+}
