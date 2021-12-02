@@ -1,0 +1,12 @@
+{
+    "plugin_name": "Docurain",
+    "uuid": "d680c0b9-6d42-4d76-b6a3-11f172902625",
+    "plugin_view_name": "Docurain",
+    "description": "ExcelファイルからPDFファイルを作成します。",
+    "author": "Kajitori Co., Ltd.",
+    "version": "1.0.1",
+    "plugin_type": "trigger",
+    "event_triggers": "form_menubutton_show",
+    "label": "PDF出力",
+    "icon": "fa-file-pdf-o"
+}
