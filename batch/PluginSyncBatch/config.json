@@ -1,0 +1,10 @@
+{
+    "uuid": "b5c0a5d2-2716-4161-98d0-b490c1ebc521",
+    "plugin_name": "PluginSyncBatch",
+    "plugin_view_name": "外部データベースのバッチによる同期処理",
+    "description": "外部データベースの都市データをExmentのテーブルと一括同期します。",
+    "author":  "Kajitori",
+    "version": "1.0.0",
+    "plugin_type": "batch",
+    "batch_hour": 3
+}
