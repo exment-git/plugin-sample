@@ -1,0 +1,19 @@
+{
+    "plugin_name": "WithTemplate",
+    "plugin_view_name" : "テンプレートインストール",
+    "explain": "プラグインと一緒に、テンプレートをインストールします。",
+    "uuid":  "da2e712d-f992-c7aa-ba29-80090a5940be",
+    "author":  "",
+    "version": "1.0.0",
+    "plugin_type": "page",
+    "route": [
+        {
+            "uri": "",
+            "method": [
+                "get"
+            ],
+            "function": "index"
+        }
+    ],
+    "templates": true
+}
