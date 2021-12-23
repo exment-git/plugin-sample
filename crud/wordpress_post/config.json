@@ -1,0 +1,9 @@
+{
+    "plugin_name": "WordPressPost",
+    "plugin_view_name" : "WordPressPost",
+    "description": "WordPressサイトの投稿を表示・追加・編集・削除します。",
+    "uuid":  "f95b075f-4fb0-f2ea-847e-1ee0fab0e7b0",
+    "author":  "Kajitori",
+    "version": "1.0.0",
+    "plugin_type": "crud"
+}

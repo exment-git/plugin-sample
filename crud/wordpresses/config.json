@@ -1,0 +1,9 @@
+{
+    "plugin_name": "WordPresses",
+    "plugin_view_name" : "WordPress一覧",
+    "description": "複数のWordPressサイトの投稿を切り替えて表示します。",
+    "uuid":  "e9c5ce95-ce92-2610-621d-8b4fb3c6601a",
+    "author":  "Kajitori",
+    "version": "1.0.0",
+    "plugin_type": "crud"
+}
