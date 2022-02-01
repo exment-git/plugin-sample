@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Plugins\OAuthExment;
+namespace App\Plugins\OtherExment;
 
 use Exceedone\Exment\Services\Plugin\PluginCrudBase;
 use Encore\Admin\Widgets\Form as WidgetForm;
@@ -22,9 +22,27 @@ class Plugin extends PluginCrudBase
      *
      * @var string
      */
-    protected $title = '記事一覧';
+    protected $title = 'Exment 他のExmentよりデータ取得';
 
     protected $useCustomOption = true;
+
+    /**
+     * 一度列定義を取得していた場合はここにセットしておく
+     *
+     * @var \Illuminate\Support\Collection
+     */
+    protected $fieldDefinitions;
+
+    /**
+     * Get auth type.
+     * Please set null or "key" pr "id_password" or "oauth".
+     *
+     * @return string|null
+     */
+    public function getAuthType() : ?string
+    {
+        return 'oauth';
+    }
 
     /**
      * Get max chunk count.
@@ -44,12 +62,50 @@ class Plugin extends PluginCrudBase
      */
     public function getFieldDefinitions()
     {
-        return [
-            ['key' => 'id', 'label' => 'ID', 'primary' => true, 'grid' => 1, 'show' => 1],
-            ['key' => 'title', 'label' => 'タイトル', 'grid' => 2, 'show' => 2],
-            ['key' => 'date', 'label' => '作成日時', 'grid' => 3, 'show' => 3],
-            ['key' => 'content', 'label' => '本文', 'show' => 4],
-        ];
+        if(isset($this->fieldDefinitions)){
+            return $this->fieldDefinitions;
+        }
+
+        // ExmentのAPIから列定義取得
+        $client = new Client();
+        $endpoint = $this->getEndpoint();
+        if(is_nullorempty($endpoint)){
+            $endpoint = $this->getExmentTables()->first();
+        }
+        $uri = url_join($this->getSiteUrl(), 'api/table/' . $endpoint . '/columns');
+
+        $authorization = "Bearer " . $this->getOauthAccessToken();
+        $response = $client->get($uri, [
+            'headers' => [
+                'Authorization' => $authorization,
+            ],
+            'query' => ['count' => 100],
+        ]);
+
+        $json = json_decode((string)$response->getBody());
+        $json = json_decode(json_encode($json), true);
+        
+        // IDの列を追加
+        $result = collect();
+        $result->push([
+            'key' => 'id',
+            'label' => 'ID',
+            'primary' => true,
+            'grid' => 1,
+            'show' => 1,
+        ]);
+        collect($json)->each(function($j) use(&$result){
+            $result->push([
+                'key' => array_get($j, 'column_name'),
+                'label' => array_get($j, 'column_view_name'),
+                'grid' => 1,
+                'show' => 1,
+                'order' => array_get($j, 'order', 9999),
+            ]);
+        });
+
+        $this->fieldDefinitions = $result;
+        return $result;
     }
 
     /**
@@ -60,16 +116,19 @@ class Plugin extends PluginCrudBase
      */
     public function getPaginate(array $options = []) : ?LengthAwarePaginator
     {
-        $client = new Client([
-            'base_uri' => $this->getSiteUrl(),
-        ]);
+        $client = new Client();
 
         $query = [
             'per_page' => $options['per_page'] ?? 20,
-            'page' => $options['page'] ?? 20
+            'page' => $options['page'] ?? 20,
+            'valuetype' => 'text',
         ];
 
-        $uri = 'api/data/' . $this->getEndpoint();
+        $endpoint = $this->getEndpoint();
+        if(is_nullorempty($endpoint)){
+            $endpoint = $this->getExmentTables()->first();
+        }
+        $uri = url_join($this->getSiteUrl(), 'api/data/' . $endpoint);
 
         if(array_has($options, 'query')){
             $query['q'] = array_get($options, 'query');
@@ -85,22 +144,29 @@ class Plugin extends PluginCrudBase
         ]);
 
         $json = json_decode((string)$response->getBody());
+        $json = json_decode(json_encode($json), true);
 
-        $result = collect($json)->map(function($j){
-            $j = json_decode(json_encode($j), true);
-            return (object)[
-                'id' => array_get($j, 'id'),
-                'title' => array_get($j, 'title.rendered'),
-                'content' => array_get($j, 'content.rendered'),
-                'date' => array_get($j, 'date'),
-            ];
+        $result = collect(array_get($json, 'data'))->map(function($j){
+            $result = [];
+            foreach($this->getFieldDefinitions() as $definition){
+                // IDの場合はそのままセット
+                $key = array_get($definition, 'key');
+                if($key == 'id'){
+                    $result[$key] = array_get($j, 'id');
+                }
+                // 値の場合はvalue.{キー名}からセット
+                else{
+                    $result[$key] = array_get($j, "value.{$key}");
+                }
+            }
+            return (object)$result;
         });
         
         return new LengthAwarePaginator(
             $result, 
-            array_get($response->getHeaders(), 'X-WP-Total')[0], 
-            $query['per_page'],
-            $query['page'],
+            array_get($json, 'total'), 
+            array_get($json, 'per_page'), 
+            array_get($json, 'current_page'), 
             [
                 'path' => $this->getFullUrl(),
             ]
@@ -115,19 +181,42 @@ class Plugin extends PluginCrudBase
      */
     public function getData($id, array $options = [])
     {
-        $client = new Client([
-            'base_uri' => $this->getSiteUrl(),
-        ]);
-        $response = $client->request('GET', "wp-json/wp/v2/posts/{$id}");
-        $json = json_decode((string)$response->getBody());
-        
-        $j = json_decode(json_encode($json), true);
-        return (object)[
-            'id' => array_get($j, 'id'),
-            'title' => array_get($j, 'title.rendered'),
-            'content' => array_get($j, 'content.rendered'),
-            'date' => array_get($j, 'date'),
+        $client = new Client();
+
+        $query = [
+            'valuetype' => 'text',
         ];
+
+        $endpoint = $this->getEndpoint();
+        if (is_nullorempty($endpoint)) {
+            $endpoint = $this->getExmentTables()->first();
+        }
+        $uri = url_join($this->getSiteUrl(), 'api/data/' . $endpoint . '/' . $id);
+
+        $authorization = "Bearer " . $this->getOauthAccessToken();
+        $response = $client->get($uri, [
+            'headers' => [
+                'Authorization' => $authorization,
+            ],
+            'query' => $query,
+        ]);
+
+        $json = json_decode((string)$response->getBody());
+        $json = json_decode(json_encode($json), true);
+
+        $result = [];
+        foreach ($this->getFieldDefinitions() as $definition) {
+            // IDの場合はそのままセット
+            $key = array_get($definition, 'key');
+            if ($key == 'id') {
+                $result[$key] = array_get($json, 'id');
+            }
+            // 値の場合はvalue.{キー名}からセット
+            else {
+                $result[$key] = array_get($json, "value.{$key}");
+            }
+        }
+        return (object)$result;
     }
 
     /**
@@ -175,17 +264,6 @@ class Plugin extends PluginCrudBase
     }
 
     /**
-     * Whether freeword search. If true, show search box in grid.
-     * Default: false
-     *
-     * @return bool
-     */
-    public function enableFreewordSearch(array $options = []) : bool
-    {
-        return true;
-    }
-
-    /**
      * Whether access all CRUD page. If false, cannot access all page.
      * Default: true
      *
@@ -212,34 +290,6 @@ class Plugin extends PluginCrudBase
         parent::setShowColumnDifinition($form, $key, $label);
     }
 
-    /**
-     * Wordpressサイト設定一覧を取得
-     *
-     * @return array
-     */
-    protected function getSiteDefinitions() : Collection
-    {
-        $url = $this->plugin->getCustomOption('site');
-        $siteStrings = explodeBreak($siteString);
-        
-        $configs = [];
-        foreach($siteStrings as $s){
-            $ses = explode(',', $s);
-            if(count($ses) < 3){
-                continue;
-            }
-
-            $configs[] = [
-                'endpoint' => $ses[0],
-                'label' => $ses[1],
-                'url' => $ses[2],
-            ];
-        }
-
-        return collect($configs);
-    }
-
-
     // 以下、独自実装部分 --------------------------------------------------------
 
     /**
@@ -249,21 +299,16 @@ class Plugin extends PluginCrudBase
      */
     protected function getExmentTables() : \Illuminate\Support\Collection
     {
-        $client = new Client([
-            'base_uri' => $this->getSiteUrl(),
-        ]);
-
-        $query = [
-            'count' => $this->getChunkCount(),
-        ];
-
-        $response = $client->get('api/table', ['query' => $query]);
-
-        $json = json_decode((string)$response->getBody());
-
-        return $json;
+        return collect(explodeBreak($this->plugin->getCustomOption('tables')));
     }
 
+    /**
+     * Get the value of endpoint
+     */ 
+    public function getEndpoint()
+    {
+        return $this->endpoint;
+    }
 
     /**
      * ExmentサイトURLを取得
@@ -273,6 +318,21 @@ class Plugin extends PluginCrudBase
     protected function getSiteUrl() : ?string
     {
         return $this->plugin->getCustomOption('site');
+    }
+
+    /**
+     * Get target all endpoints
+     * If support multiple endpoints, override function, end return. 
+     *
+     * @return array|null
+     */
+    public function getAllEndpoints() : ?Collection
+    {
+        $tables = $this->getExmentTables();
+        if(\is_nullorempty($tables) || count($tables) <= 1){
+            return null;
+        }
+        return $tables;
     }
 
     /**

@@ -118,24 +118,6 @@ class Plugin extends PluginCrudBase
     }
 
     /**
-     * Get class name. Toggle using endpoint name.
-     *
-     * @param string|null $endpoint
-     * @return string|null class name
-     */
-    public function getPluginClassName(?string $endpoint)
-    {
-        $sites = $this->getSiteDefinitions();
-        if(!$sites->contains(function($site) use($endpoint){
-            return array_get($site, 'endpoint') == $endpoint;
-        })){
-            return null;
-        }
-        
-        return get_class($this);
-    }
-    
-    /**
      * (8) (任意：)新規作成を実行可能とするかどうか
      * Whether create data. If false, disable create button.
      * Default: true
