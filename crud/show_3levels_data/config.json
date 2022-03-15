@@ -1,0 +1,9 @@
+{
+    "plugin_name": "PluginCrudSample",
+    "plugin_view_name" : "独自のSQLでExmentデータ表示",
+    "description": "独自のSQLを作成して、親子孫の３階層データを表示します。",
+    "uuid":  "e4b57b60-6ff8-987b-701d-50dd38e49e30",
+    "author":  "Kajitori",
+    "version": "1.0.0",
+    "plugin_type": "crud"
+}
