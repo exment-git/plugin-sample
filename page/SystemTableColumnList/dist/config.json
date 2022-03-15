@@ -1,0 +1,19 @@
+{
+    "plugin_name": "SystemTableColumnList",
+    "plugin_view_name" : "システム向け テーブル・列一覧表示",
+    "explain": "内部パラメータも含めた、Exmentのテーブル・列の一覧を表示します。",
+    "uuid":  "40a55717-6aed-bd06-93d9-749667e26ce6",
+    "author":  "",
+    "version": "1.0.0",
+    "plugin_type": "page",
+    "route": [
+        {
+            "uri": "",
+            "method": [
+                "get"
+            ],
+            "function": "index"
+        }
+    ],
+    "templates": true
+}
