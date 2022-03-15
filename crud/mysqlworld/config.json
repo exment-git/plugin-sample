@@ -1,0 +1,10 @@
+{
+    "plugin_name": "MySQLWorld",
+    "plugin_view_name" : "MySQL World連携",
+    "description": "MySQLのサンプルデータベース「World」とExmentを連携します。",
+    "uuid":  "2641201a-ba35-2bd9-af59-9440643ca206",
+    "author":  "Kajitori",
+    "version": "1.0.0",
+    "uri":  "mysql_world",
+    "plugin_type": "crud"
+}

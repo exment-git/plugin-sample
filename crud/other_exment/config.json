@@ -1,0 +1,9 @@
+{
+    "plugin_name": "OtherExment",
+    "plugin_view_name" : "他のサイトのExmentデータ表示",
+    "description": "他のサイトのExmentと連携し、データを表示します。",
+    "uuid":  "629085a0-5ac5-05e4-22ce-c80c4b3e4fdf",
+    "author":  "Kajitori",
+    "version": "1.0.0",
+    "plugin_type": "crud"
+}

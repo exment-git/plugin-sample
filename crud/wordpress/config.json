@@ -1,0 +1,9 @@
+{
+    "plugin_name": "WordPress",
+    "plugin_view_name" : "WordPress",
+    "description": "WordPressサイトの投稿を表示します。",
+    "uuid":  "f80654b2-9bb8-a7e5-835f-cfca2c1c3704",
+    "author":  "Kajitori",
+    "version": "1.0.0",
+    "plugin_type": "crud"
+}
