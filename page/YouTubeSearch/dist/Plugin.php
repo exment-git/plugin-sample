@@ -3,15 +3,9 @@
 namespace App\Plugins\YouTubeSearch;
 
 use Encore\Admin\Form;
-use Encore\Admin\Grid;
-use Encore\Admin\Facades\Admin;
-use Encore\Admin\Layout\Content;
 use Encore\Admin\Widgets\Box;
-use Encore\Admin\Controllers\HasResourceActions;
-use Exceedone\Exment\Model\PluginPage;
 use Exceedone\Exment\Model\CustomTable;
 use Exceedone\Exment\Services\Plugin\PluginPageBase;
-use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 
 

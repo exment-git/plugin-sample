@@ -1,0 +1,11 @@
+{
+    "plugin_name": "TestPluginDownload",
+    "uuid": "e9b18218-2cc6-acea-e5cf-36b88ced5a62",
+    "plugin_view_name": "ファイルダウンロードテスト",
+    "description": "プラグインによって、ファイルをダウンロードするテストです。",
+    "author": "Kajitori",
+    "version": "1.0.0",
+    "plugin_type": "button",
+    "event_triggers": "form_menubutton_show",
+    "target_tables": "information"
+}
