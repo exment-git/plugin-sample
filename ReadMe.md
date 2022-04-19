@@ -28,6 +28,12 @@ Exmentのサンプルプラグインになります。
 | TableScroll | 表 横スクロールスタイル | スタイル | style/TableScroll | 表の横スクロールのスタイルを設定します。 |
 | PluginValidatorTest | バリデーションテスト | バリデーション | validation/PluginValidatorTest | カスタムテーブルのバリデーションのテストです。 |
 | KanbanView | かんばんビュー | ビュー | view/KanbanView | シンプルなかんばんビューを表示するプラグインです。 |
+| MySQLWorld | 他のデータベース連携 | CRUDページ | crud/mysqlworld | Exmentとは異なるデータベースと接続し、データの取得・追加・編集・削除を実施します。 |
+| ShowLevels3Data | Exmentデータ独自取得 | CRUDページ | crud/show_levels3_data | 独自のSQLを用いて、3階層の項目を同時に一覧・参照できるようにするサンプルです。 |
+| WordPress | REST API連携 | CRUDページ | crud/wordpress | REST APIを使用し、指定のWordpressサイトの投稿を一覧表示・詳細表示します。 |
+| WordPresses | REST API連携(複数エンドポイント) | CRUDページ | crud/wordpresses | REST APIを使用し、複数のWordpressサイトの投稿を一覧表示・詳細表示します。複数のエンドポイントに対応し、画面からボタンで対象サイトを切り替えます。 |
+| WordPressPost | REST API連携(認証、POST) | CRUDページ | crud/wordpress_post | REST APIを使用し、指定のWordpressサイトの投稿を一覧表示・詳細表示します。また、事前設定したアクセスキーを使用し、投稿の追加・編集・削除も実施します。 |
+| OtherExment | REST API連携(OAuth認証) | CRUDページ | crud/wordpress_post | 別サーバーのExmentとRest API連携し、データ取得を実施します。 |
 
 
 ## 使用方法
