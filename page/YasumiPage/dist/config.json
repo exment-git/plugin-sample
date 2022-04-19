@@ -1,0 +1,31 @@
+{
+    "plugin_name": "YasumiPage",
+    "plugin_view_name" : "休みページ",
+    "explain": "表示年の祝日をページに表示します。",
+    "uuid":  "616798f1-687d-9ce0-5e55-12f09f7bbf9a",
+    "author":  "",
+    "version": "1.0.0",
+    "plugin_type": "page",
+    "route": [
+        {
+            "uri": "",
+            "method": [
+                "get"
+            ],
+            "function": "index"
+        },
+        {
+            "uri": "list",
+            "method": [
+                "get"
+            ],
+            "function": "list"
+        }
+    ],
+    "requirement": [
+        {
+            "class": "\\Yasumi\\Yasumi",
+            "composer": "azuyalabs/yasumi=^2.3"
+        }
+    ]
+}
