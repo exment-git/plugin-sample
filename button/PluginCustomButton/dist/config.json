@@ -1,0 +1,11 @@
+{
+    "plugin_name": "PluginCustomButton",
+    "uuid": "6f0777c0-8e36-11ea-ab12-0800200c9a12",
+    "plugin_view_name": "Plugin Custom Button",
+    "description": "独自のプラグインボタンを追加するテストです。",
+    "author": "(Your Name)",
+    "version": "1.0.0",
+    "plugin_type": "button",
+    "event_triggers": "form_menubutton_show",
+    "target_tables": "information"
+}

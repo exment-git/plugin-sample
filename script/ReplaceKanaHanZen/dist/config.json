@@ -1,0 +1,9 @@
+{
+    "uuid": "e2c18434-4dd6-4146-aa15-3b8003d4a77b",
+    "plugin_name": "ReplaceKanaHanZen",
+    "plugin_view_name": "カナ半角全角変換",
+    "description": "半角のカナを全角に置き換えます。",
+    "author":  "Kajitori",
+    "version": "1.0.0",
+    "plugin_type": "script"
+}
