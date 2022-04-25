@@ -9,11 +9,14 @@ Exmentのサンプルプラグインになります。
 
 | 名前 | 表示名 | 種類 | パス | 概要 |
 | ---- | ---- | ---- | ---- | ---- |
+| PluginDemoAPI | カスタム列情報取得API | API | batch/PluginDemoAPI | 列名からカスタム列情報を取得するサンプルAPIです。 |
 | HarddeleteBatch | データの物理削除 | バッチ | batch/HarddeleteBatch | 論理削除しているすべてのデータを、完全に削除します。 |
 | PluginSyncBatch | 外部データベースのバッチによる同期処理 | バッチ | batch/PluginSyncBatch | 外部データベースの都市データをExmentのテーブルと一括同期します。 |
 | TestPluginAddFileButton | ファイル列追加ボタン | ボタン | button/TestPluginAddFileButton | 指定のデータの列に、ファイル列が存在する場合、サンプルファイルを追加します。 |
 | TestPluginDownload | ファイルダウンロードテスト | ボタン | button/TestPluginDownload | プラグインによって、ファイルをダウンロードするテストです。 |
+| PluginCustomButton | 「次へ」「前へ」ボタンを表示 | ボタン | button/PluginCustomButton | データ詳細画面に「次へ」「前へ」ボタンを表示します。 |
 | Docurain | Docurain | Docurain | docurain/Docurain | Docurainにより、PDFを作成するプラグインです。 |
+| document_demo_user | ユーザー情報出力 | ドキュメント | docurain/document_demo_user | ユーザー情報出力のテスト用です。 |
 | PluginSyncCity | 外部データ連携 | イベント | event/PluginSyncCity | 都市データの情報を外部データベースと連携します。 |
 | ExportTestCsv | エクスポート(CSV) | エクスポート | export/ExportTestCsv | CSVファイルをエクスポートするプラグインです。 |
 | ExportTestExcel | エクスポート(Excel) | エクスポート | export/ExportTestExcel | Excelファイルをエクスポートするプラグインです。 |
@@ -22,6 +25,7 @@ Exmentのサンプルプラグインになります。
 | YasumiPage | 休みページ | ページ | page/YasumiPage | 表示年の祝日をページに表示します。 |
 | YouTubeSearch | YouTube検索 | ページ | page/YouTubeSearch | YouTubeでデータ検索を行うプラグインです。 |
 | ReplaceZenHan | 全角半角変換 | スクリプト | script/ReplaceZenHan | 全角の英数字を半角に置き換えます。 |
+| ReplaceKanaHanZen | 半角カナ→全角カナ変換 | スクリプト | script/ReplaceKanaHanZen | 半角カナを全角カナに置き換えます。 |
 | SetAddress | 入力フォーム 住所セット | スクリプト | script/SetAddress | 入力フォームの郵便番号を使用し、住所をセットします。 |
 | TestScript | スクリプトテスト | スクリプト | script/TestScript | 一通りのスクリプトをテストします。 |
 | SetStyle | スタイルテスト | スタイル | style/SetStyle | スタイルテストです。すべての文字色を赤色にします。 |
