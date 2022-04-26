@@ -121,26 +121,27 @@ class Plugin extends PluginCrudBase
     }
 
     /**
-     * Whether edit target data. If false, disable edit button and link.
+     * Whether edit all. If false, disable edit button and link.
      * Default: true
      *
      * @return bool
      */
-    public function enableEdit($value, array $options = []) : bool
+    public function enableEditAll(array $options = []) : bool
     {
         return false;
     }
 
     /**
-     * Whether delete target data. If false, disable delete button and link.
+     * Whether delete all. If false, disable delete button and link.
      * Default: true
      *
      * @return bool
      */
-    public function enableDelete($value, array $options = []) : bool
+    public function enableDeleteAll(array $options = []) : bool
     {
         return false;
     }
+    
     /**
      * Whether export data. If false, disable export button and link.
      * Default: false
