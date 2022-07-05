@@ -1,4 +1,4 @@
-# プラグイン(バッチ) サンプル - 操作ログローテーション
+# プラグイン(バッチ) サンプル - 操作ログ 古いログ削除
 Exmentの操作ログを、一定日付経過したものをデータベースから物理削除します。  
 ※既定は14日です。基準となる日数は、設定画面から変更できます。
 
@@ -27,7 +27,7 @@ Exmentの操作ログを、一定日付経過したものをデータベース�
 php artisan exment:batch 1
 
 # plugin_name(プラグイン名)指定
-php artisan exment:batch --name=OperationLogRotate
+php artisan exment:batch --name=OperationLogDelete
 
 # uuid指定
 php artisan exment:batch --uuid=96937d87-6b53-cbe4-c1ff-c33e59948761

@@ -12,7 +12,7 @@ Exmentのサンプルプラグインになります。
 | PluginDemoAPI | カスタム列情報取得API | API | batch/PluginDemoAPI | 列名からカスタム列情報を取得するサンプルAPIです。 |
 | HarddeleteBatch | データの物理削除 | バッチ | batch/HarddeleteBatch | 論理削除しているすべてのデータを、完全に削除します。 |
 | PluginSyncBatch | 外部データベースのバッチによる同期処理 | バッチ | batch/PluginSyncBatch | 外部データベースの都市データをExmentのテーブルと一括同期します。 |
-| OperationLogRotate | 操作ログローテーション | バッチ | batch/OperationLogRotate | Exmentの操作ログを、一定日付経過したものをデータベースから物理削除します。 |
+| OperationLogDelete | 操作ログローテーション | バッチ | batch/OperationLogDelete | Exmentの操作ログを、一定日付経過したものをデータベースから物理削除します。 |
 | TestPluginAddFileButton | ファイル列追加ボタン | ボタン | button/TestPluginAddFileButton | 指定のデータの列に、ファイル列が存在する場合、サンプルファイルを追加します。 |
 | TestPluginDownload | ファイルダウンロードテスト | ボタン | button/TestPluginDownload | プラグインによって、ファイルをダウンロードするテストです。 |
 | PluginCustomButton | 「次へ」「前へ」ボタンを表示 | ボタン | button/PluginCustomButton | データ詳細画面に「次へ」「前へ」ボタンを表示します。 |

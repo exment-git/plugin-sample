@@ -1,5 +1,5 @@
 <?php
-namespace App\Plugins\OperationLogRotate;
+namespace App\Plugins\OperationLogDelete;
 
 use Exceedone\Exment\Services\Plugin\PluginBatchBase;
 
@@ -35,7 +35,7 @@ class Plugin extends PluginBatchBase
      */
     public function setCustomOptionForm(&$form)
     {
-        $form->number('rotate_day', 'ローテーション日付')
+        $form->number('rotate_day', '基準日付')
             ->min(0)
             ->default($this->plugin->getOption('rotate_day') ?? 14)
             ->help('何日前のログを削除するかを設定します。※既定は14日です。');
