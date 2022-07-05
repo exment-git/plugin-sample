@@ -1,0 +1,9 @@
+{
+    "uuid": "96937d87-6b53-cbe4-c1ff-c33e59948761",
+    "plugin_name": "OperationLogRotate",
+    "plugin_view_name": "操作ログローテーション",
+    "description": "Exmentの操作ログを、一定日付経過したものを削除します。※既定は14日です。基準となる日数は、設定画面から変更できます。",
+    "author":  "Kajitori",
+    "version": "1.0.0",
+    "plugin_type": "batch"
+}
