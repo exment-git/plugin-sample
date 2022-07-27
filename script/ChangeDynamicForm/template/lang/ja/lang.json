@@ -1,0 +1,25 @@
+{
+    "template_view_name": "代理店テンプレート",
+    "description": null,
+    "custom_tables": [
+        {
+            "table_name": "agency",
+            "table_view_name": "代理店",
+            "description": null
+        }
+    ],
+    "custom_relations": [],
+    "custom_forms": [
+        {
+            "suuid": "d99995ad6adbd85922de",
+            "form_view_name": "フォーム"
+        }
+    ],
+    "custom_views": [
+        {
+            "suuid": "3eaa46fa146196b5a211",
+            "view_view_name": "全件ビュー"
+        }
+    ],
+    "custom_copies": []
+}
