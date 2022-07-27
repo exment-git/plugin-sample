@@ -29,6 +29,7 @@ Exmentのサンプルプラグインになります。
 | ReplaceKanaHanZen | 半角カナ→全角カナ変換 | スクリプト | script/ReplaceKanaHanZen | 半角カナを全角カナに置き換えます。 |
 | SetAddress | 入力フォーム 住所セット | スクリプト | script/SetAddress | 入力フォームの郵便番号を使用し、住所をセットします。 |
 | TestScript | スクリプトテスト | スクリプト | script/TestScript | 一通りのスクリプトをテストします。 |
+| ChangeDynamicForm | 入力フォーム 動的切り替え | スクリプト | script/ChangeDynamicForm | 入力フォームの選択値に応じて、項目の表示非表示を切り替えます。 |
 | SetStyle | スタイルテスト | スタイル | style/SetStyle | スタイルテストです。すべての文字色を赤色にします。 |
 | TableScroll | 表 横スクロールスタイル | スタイル | style/TableScroll | 表の横スクロールのスタイルを設定します。 |
 | PluginValidatorTest | バリデーションテスト | バリデーション | validation/PluginValidatorTest | カスタムテーブルのバリデーションのテストです。 |
