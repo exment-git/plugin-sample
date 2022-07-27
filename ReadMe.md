@@ -18,6 +18,7 @@ Exmentのサンプルプラグインになります。
 | PluginCustomButton | 「次へ」「前へ」ボタンを表示 | ボタン | button/PluginCustomButton | データ詳細画面に「次へ」「前へ」ボタンを表示します。 |
 | Docurain | Docurain | Docurain | docurain/Docurain | Docurainにより、PDFを作成するプラグインです。 |
 | document_demo_user | ユーザー情報出力 | ドキュメント | docurain/document_demo_user | ユーザー情報出力のテスト用です。 |
+| PluginDemoDocument | Exment新着情報出力 | ドキュメント | docurain/PluginDemoDocument | APIから取得したExment新着情報を出力します。 |
 | PluginSyncCity | 外部データ連携 | イベント | event/PluginSyncCity | 都市データの情報を外部データベースと連携します。 |
 | ExportTestCsv | エクスポート(CSV) | エクスポート | export/ExportTestCsv | CSVファイルをエクスポートするプラグインです。 |
 | ExportTestExcel | エクスポート(Excel) | エクスポート | export/ExportTestExcel | Excelファイルをエクスポートするプラグインです。 |
