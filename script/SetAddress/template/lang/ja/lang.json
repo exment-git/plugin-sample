@@ -1,0 +1,50 @@
+{
+    "template_view_name": "住所情報",
+    "description": null,
+    "custom_tables": [
+        {
+            "table_name": "Address",
+            "table_view_name": "住所情報",
+            "description": null
+        },
+        {
+            "table_name": "Address_OneLine",
+            "table_view_name": "住所情報(各１行)",
+            "description": null
+        }
+    ],
+    "custom_relations": [],
+    "custom_forms": [
+        {
+            "suuid": "f72ebedd4aec84b09c45",
+            "form_view_name": "フォーム"
+        },
+        {
+            "suuid": "9990a55150e0f4f87215",
+            "form_view_name": "フォーム"
+        }
+    ],
+    "custom_views": [
+        {
+            "suuid": "c918b5651ae1bb3684f5",
+            "view_view_name": "全件ビュー"
+        },
+        {
+            "suuid": "607938493193c0265bbe",
+            "view_view_name": "全件ビュー"
+        }
+    ],
+    "custom_copies": [],
+    "admin_menu": [
+        {
+            "title": "住所情報",
+            "menu_type": "table",
+            "menu_name": "plugin_test"
+        },
+        {
+            "title": "住所情報(各1行)",
+            "menu_type": "table",
+            "menu_name": "plugin_test2"
+        }
+    ]
+}
