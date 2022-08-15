@@ -1,0 +1,9 @@
+{
+    "uuid": "98cf18f5-7557-6d02-2655-bc6267c39c56",
+    "plugin_name": "CalendarBind",
+    "plugin_view_name": "カレンダービュー 条件によって色を変更",
+    "description": "カレンダービューで、条件によって色を変更するサンプルです。",
+    "author":  "Kajitori",
+    "version": "1.0.0",
+    "plugin_type": "script"
+}
