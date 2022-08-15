@@ -41,6 +41,7 @@ Exmentのサンプルプラグインになります。
 | WordPresses | REST API連携(複数エンドポイント) | CRUDページ | crud/wordpresses | REST APIを使用し、複数のWordpressサイトの投稿を一覧表示・詳細表示します。複数のエンドポイントに対応し、画面からボタンで対象サイトを切り替えます。 |
 | WordPressPost | REST API連携(認証、POST) | CRUDページ | crud/wordpress_post | REST APIを使用し、指定のWordpressサイトの投稿を一覧表示・詳細表示します。また、事前設定したアクセスキーを使用し、投稿の追加・編集・削除も実施します。 |
 | OtherExment | REST API連携(OAuth認証) | CRUDページ | crud/OtherExment | 別サーバーのExmentとRest API連携し、データ取得を実施します。 |
+| BatchButton | バッチ・ボタンの同時実装 | バッチ・ボタン | multiple_plugin_type/batch-button | 複数のプラグインを1つのプラグインとして実装するサンプルです。 |
 
 
 ## 使用方法

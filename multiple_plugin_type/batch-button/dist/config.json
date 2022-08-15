@@ -1,0 +1,11 @@
+{
+    "uuid": "697b7391-4f14-42c9-2f18-be57a56b0f66",
+    "plugin_name": "BatchButton",
+    "plugin_view_name": "バッチ・ボタンの同時実装",
+    "description": "バッチ・ボタンのプラグインを、同時に実装します。",
+    "author":  "Kajitori",
+    "version": "1.0.0",
+    "plugin_type": "batch,button",
+    "event_triggers": "form_menubutton_show",
+    "target_tables": "information"
+}
