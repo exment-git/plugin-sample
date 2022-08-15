@@ -1,0 +1,14 @@
+{
+    "plugin_name": "PluginDemoDocument",
+    "uuid": "63d80590-4aad-11e9-b475-0800200c9a66",
+    "plugin_view_name": "Plugin Demo Document",
+    "description": "独自処理を実装してドキュメント出力を行うサンプルです。",
+    "author":  "Kajitori",
+    "version": "1.0.0",
+    "plugin_type": "document",
+    "target_tables": "information",
+    "filename": "Exment更新履歴_${ymdhms}",
+    "label": "更新履歴出力",
+    "icon": "fa-files-o",
+    "button_class": "btn-success"
+}

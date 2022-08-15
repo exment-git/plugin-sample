@@ -1,0 +1,9 @@
+{
+    "uuid": "926deea0-0d56-11ed-aa05-0800200c9a66",
+    "plugin_name": "ChangeDynamicForm",
+    "plugin_view_name": "入力フォーム 動的切り替え",
+    "description": "入力フォームの選択値に応じて、項目の表示非表示を切り替えます。",
+    "author":  "Kajitori",
+    "version": "1.0.0",
+    "plugin_type": "script"
+}

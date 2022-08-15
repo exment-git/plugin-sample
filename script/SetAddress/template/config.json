@@ -1,0 +1,633 @@
+{
+    "template_name": "SetAddress_Table",
+    "version": "v5.0.0",
+    "template_view_name": "住所情報",
+    "description": null,
+    "custom_tables": [
+        {
+            "table_name": "Address",
+            "table_view_name": "住所情報",
+            "description": null,
+            "system_flg": "0",
+            "showlist_flg": "1",
+            "order": "0",
+            "options": {
+                "icon": "fa-pencil",
+                "search_enabled": "1",
+                "use_label_id_flg": "0",
+                "one_record_flg": "0",
+                "attachment_flg": "1",
+                "comment_flg": "1",
+                "revision_flg": "1",
+                "revision_count": "100",
+                "all_user_editable_flg": "0",
+                "all_user_viewable_flg": "0",
+                "all_user_accessable_flg": "0"
+            },
+            "custom_columns": [
+                {
+                    "column_name": "zip01",
+                    "column_view_name": "郵便番号１",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "0",
+                    "order": "0",
+                    "options": {
+                        "required": "0",
+                        "index_enabled": "1",
+                        "freeword_search": "0",
+                        "unique": "0",
+                        "init_only": "0",
+                        "string_length": "256",
+                        "available_characters": [],
+                        "suggest_input": "0",
+                        "select_import_table_name": null,
+                        "select_import_column_name": null,
+                        "select_export_table_name": null,
+                        "select_export_column_name": null
+                    }
+                },
+                {
+                    "column_name": "zip02",
+                    "column_view_name": "郵便番号２",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "0",
+                    "order": "0",
+                    "options": {
+                        "required": "0",
+                        "index_enabled": "1",
+                        "freeword_search": "0",
+                        "unique": "0",
+                        "init_only": "0",
+                        "string_length": "256",
+                        "available_characters": [],
+                        "suggest_input": "0",
+                        "select_import_table_name": null,
+                        "select_import_column_name": null,
+                        "select_export_table_name": null,
+                        "select_export_column_name": null
+                    }
+                },
+                {
+                    "column_name": "pref",
+                    "column_view_name": "都道府県",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "0",
+                    "order": "0",
+                    "options": {
+                        "required": "0",
+                        "index_enabled": "1",
+                        "freeword_search": "0",
+                        "unique": "0",
+                        "init_only": "0",
+                        "string_length": "256",
+                        "available_characters": [],
+                        "suggest_input": "0",
+                        "select_import_table_name": null,
+                        "select_import_column_name": null,
+                        "select_export_table_name": null,
+                        "select_export_column_name": null
+                    }
+                },
+                {
+                    "column_name": "addr01",
+                    "column_view_name": "市区町村",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "0",
+                    "order": "0",
+                    "options": {
+                        "required": "0",
+                        "index_enabled": "1",
+                        "freeword_search": "0",
+                        "unique": "0",
+                        "init_only": "0",
+                        "string_length": "256",
+                        "available_characters": [],
+                        "suggest_input": "0",
+                        "select_import_table_name": null,
+                        "select_import_column_name": null,
+                        "select_export_table_name": null,
+                        "select_export_column_name": null
+                    }
+                },
+                {
+                    "column_name": "addr02",
+                    "column_view_name": "以降の住所",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "0",
+                    "order": "0",
+                    "options": {
+                        "required": "0",
+                        "index_enabled": "1",
+                        "freeword_search": "0",
+                        "unique": "0",
+                        "init_only": "0",
+                        "string_length": "256",
+                        "available_characters": [],
+                        "suggest_input": "0",
+                        "select_import_table_name": null,
+                        "select_import_column_name": null,
+                        "select_export_table_name": null,
+                        "select_export_column_name": null
+                    }
+                }
+            ],
+            "custom_column_multisettings": []
+        },
+        {
+            "table_name": "Address_OneLine",
+            "table_view_name": "住所情報(各１行)",
+            "description": null,
+            "system_flg": "0",
+            "showlist_flg": "1",
+            "order": "0",
+            "options": {
+                "icon": "fa-pencil",
+                "search_enabled": "1",
+                "use_label_id_flg": "0",
+                "one_record_flg": "0",
+                "attachment_flg": "1",
+                "comment_flg": "1",
+                "revision_flg": "1",
+                "revision_count": "100",
+                "all_user_editable_flg": "0",
+                "all_user_viewable_flg": "0",
+                "all_user_accessable_flg": "0"
+            },
+            "custom_columns": [
+                {
+                    "column_name": "zip",
+                    "column_view_name": "郵便番号",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "0",
+                    "order": "0",
+                    "options": {
+                        "required": "0",
+                        "index_enabled": "1",
+                        "freeword_search": "0",
+                        "unique": "0",
+                        "init_only": "0",
+                        "string_length": "256",
+                        "available_characters": [],
+                        "suggest_input": "0",
+                        "select_import_table_name": null,
+                        "select_import_column_name": null,
+                        "select_export_table_name": null,
+                        "select_export_column_name": null
+                    }
+                },
+                {
+                    "column_name": "addr",
+                    "column_view_name": "住所",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "0",
+                    "order": "0",
+                    "options": {
+                        "required": "0",
+                        "index_enabled": "1",
+                        "freeword_search": "0",
+                        "unique": "0",
+                        "init_only": "0",
+                        "string_length": "256",
+                        "available_characters": [],
+                        "suggest_input": "0",
+                        "select_import_table_name": null,
+                        "select_import_column_name": null,
+                        "select_export_table_name": null,
+                        "select_export_column_name": null
+                    }
+                }
+            ],
+            "custom_column_multisettings": []
+        }
+    ],
+    "custom_relations": [],
+    "custom_forms": [
+        {
+            "suuid": "f72ebedd4aec84b09c45",
+            "form_view_name": "フォーム",
+            "default_flg": "1",
+            "options": null,
+            "custom_form_blocks": [
+                {
+                    "form_block_view_name": null,
+                    "form_block_type": "0",
+                    "available": "1",
+                    "options": null,
+                    "custom_form_columns": [
+                        {
+                            "suuid": "0d7695bb7e175c372316",
+                            "form_column_type": "0",
+                            "row_no": "1",
+                            "column_no": "1",
+                            "width": "2",
+                            "options": {
+                                "changedata_column_table_name": null,
+                                "changedata_column_name": null,
+                                "changedata_target_table_name": null,
+                                "changedata_target_column_name": null,
+                                "relation_filter_target_table_name": null,
+                                "relation_filter_target_column_name": null
+                            },
+                            "order": "53",
+                            "form_column_target_name": "zip01"
+                        },
+                        {
+                            "suuid": "80bc52af9e7c61957e2f",
+                            "form_column_type": "0",
+                            "row_no": "1",
+                            "column_no": "1",
+                            "width": "2",
+                            "options": {
+                                "changedata_column_table_name": null,
+                                "changedata_column_name": null,
+                                "changedata_target_table_name": null,
+                                "changedata_target_column_name": null,
+                                "relation_filter_target_table_name": null,
+                                "relation_filter_target_column_name": null
+                            },
+                            "order": "54",
+                            "form_column_target_name": "zip02"
+                        },
+                        {
+                            "suuid": "d758700540fc0accf5cb",
+                            "form_column_type": "0",
+                            "row_no": "1",
+                            "column_no": "1",
+                            "width": "2",
+                            "options": {
+                                "changedata_column_table_name": null,
+                                "changedata_column_name": null,
+                                "changedata_target_table_name": null,
+                                "changedata_target_column_name": null,
+                                "relation_filter_target_table_name": null,
+                                "relation_filter_target_column_name": null
+                            },
+                            "order": "55",
+                            "form_column_target_name": "pref"
+                        },
+                        {
+                            "suuid": "55039100372fcf559129",
+                            "form_column_type": "0",
+                            "row_no": "1",
+                            "column_no": "1",
+                            "width": "2",
+                            "options": {
+                                "changedata_column_table_name": null,
+                                "changedata_column_name": null,
+                                "changedata_target_table_name": null,
+                                "changedata_target_column_name": null,
+                                "relation_filter_target_table_name": null,
+                                "relation_filter_target_column_name": null
+                            },
+                            "order": "56",
+                            "form_column_target_name": "addr01"
+                        },
+                        {
+                            "suuid": "a6bef6d8b44bac10ad2c",
+                            "form_column_type": "0",
+                            "row_no": "1",
+                            "column_no": "1",
+                            "width": "2",
+                            "options": {
+                                "changedata_column_table_name": null,
+                                "changedata_column_name": null,
+                                "changedata_target_table_name": null,
+                                "changedata_target_column_name": null,
+                                "relation_filter_target_table_name": null,
+                                "relation_filter_target_column_name": null
+                            },
+                            "order": "57",
+                            "form_column_target_name": "addr02"
+                        }
+                    ],
+                    "form_block_target_table_name": "Address"
+                }
+            ],
+            "table_name": "Address"
+        },
+        {
+            "suuid": "9990a55150e0f4f87215",
+            "form_view_name": "フォーム",
+            "default_flg": "1",
+            "options": null,
+            "custom_form_blocks": [
+                {
+                    "form_block_view_name": null,
+                    "form_block_type": "0",
+                    "available": "1",
+                    "options": null,
+                    "custom_form_columns": [
+                        {
+                            "suuid": "f282f8997388954946a2",
+                            "form_column_type": "0",
+                            "row_no": "1",
+                            "column_no": "1",
+                            "width": "2",
+                            "options": {
+                                "changedata_column_table_name": null,
+                                "changedata_column_name": null,
+                                "changedata_target_table_name": null,
+                                "changedata_target_column_name": null,
+                                "relation_filter_target_table_name": null,
+                                "relation_filter_target_column_name": null
+                            },
+                            "order": "58",
+                            "form_column_target_name": "zip"
+                        },
+                        {
+                            "suuid": "0c4e0977a1292fdba44b",
+                            "form_column_type": "0",
+                            "row_no": "1",
+                            "column_no": "1",
+                            "width": "2",
+                            "options": {
+                                "changedata_column_table_name": null,
+                                "changedata_column_name": null,
+                                "changedata_target_table_name": null,
+                                "changedata_target_column_name": null,
+                                "relation_filter_target_table_name": null,
+                                "relation_filter_target_column_name": null
+                            },
+                            "order": "59",
+                            "form_column_target_name": "addr"
+                        }
+                    ],
+                    "form_block_target_table_name": "Address_OneLine"
+                }
+            ],
+            "table_name": "Address_OneLine"
+        }
+    ],
+    "custom_views": [
+        {
+            "suuid": "c918b5651ae1bb3684f5",
+            "view_type": "0",
+            "view_kind_type": "9",
+            "view_view_name": "全件ビュー",
+            "default_flg": "1",
+            "options": null,
+            "custom_options": null,
+            "custom_view_columns": [
+                {
+                    "suuid": "82d90dd929185e60276c",
+                    "view_column_type": "1",
+                    "order": "1",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "Address",
+                    "view_column_target_name": "id",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "4f37c0669f7570ee69af",
+                    "view_column_type": "0",
+                    "order": "2",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "Address",
+                    "view_column_target_name": "zip01",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "e2f0a3b7a7730dbd94e2",
+                    "view_column_type": "0",
+                    "order": "3",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "Address",
+                    "view_column_target_name": "zip02",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "cf4e5dec4f6cdc83fcb5",
+                    "view_column_type": "0",
+                    "order": "4",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "Address",
+                    "view_column_target_name": "pref",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "a0bf713a35e6549e3c39",
+                    "view_column_type": "0",
+                    "order": "5",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "Address",
+                    "view_column_target_name": "addr01",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "cea818761f96f07d1073",
+                    "view_column_type": "0",
+                    "order": "6",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "Address",
+                    "view_column_target_name": "addr02",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "02bbd6f95aca5f25fe75",
+                    "view_column_type": "1",
+                    "order": "81",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "Address",
+                    "view_column_target_name": "created_at",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "5ac353995fb30f1d0fcb",
+                    "view_column_type": "1",
+                    "order": "82",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "Address",
+                    "view_column_target_name": "updated_at",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                }
+            ],
+            "custom_view_filters": [],
+            "custom_view_sorts": [],
+            "custom_view_summaries": [],
+            "table_name": "Address"
+        },
+        {
+            "suuid": "607938493193c0265bbe",
+            "view_type": "0",
+            "view_kind_type": "9",
+            "view_view_name": "全件ビュー",
+            "default_flg": "1",
+            "options": null,
+            "custom_options": null,
+            "custom_view_columns": [
+                {
+                    "suuid": "c0a84f238dde850c0c3f",
+                    "view_column_type": "1",
+                    "order": "1",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "Address_OneLine",
+                    "view_column_target_name": "id",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "0432f3524a1738fceda0",
+                    "view_column_type": "0",
+                    "order": "2",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "Address_OneLine",
+                    "view_column_target_name": "zip",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "2edd77323ab1685458c1",
+                    "view_column_type": "0",
+                    "order": "3",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "Address_OneLine",
+                    "view_column_target_name": "addr",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "d1b32b172d27efa778e0",
+                    "view_column_type": "1",
+                    "order": "81",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "Address_OneLine",
+                    "view_column_target_name": "created_at",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "1a357d2626cdf514979e",
+                    "view_column_type": "1",
+                    "order": "82",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "Address_OneLine",
+                    "view_column_target_name": "updated_at",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                }
+            ],
+            "custom_view_filters": [],
+            "custom_view_sorts": [],
+            "custom_view_summaries": [],
+            "table_name": "Address_OneLine"
+        }
+    ],
+    "custom_copies": [],
+    "admin_menu": [
+        {
+            "order": "92",
+            "title": "住所情報",
+            "icon": "fa-home",
+            "uri": "plugin_test",
+            "options": [],
+            "menu_type": "table",
+            "menu_name": "plugin_test",
+            "parent_name": null,
+            "menu_target_name": "Address"
+        },
+        {
+            "order": "93",
+            "title": "住所情報(各1行)",
+            "icon": "fa-home",
+            "uri": "plugin_test2",
+            "options": [],
+            "menu_type": "table",
+            "menu_name": "plugin_test2",
+            "parent_name": null,
+            "menu_target_name": "Address_OneLine"
+        }
+    ]
+}

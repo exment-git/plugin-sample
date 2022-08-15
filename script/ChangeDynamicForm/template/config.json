@@ -1,0 +1,444 @@
+{
+    "template_name": "agency_template",
+    "version": "v5.0.0",
+    "template_view_name": "代理店テンプレート",
+    "description": null,
+    "custom_tables": [
+        {
+            "table_name": "agency",
+            "table_view_name": "代理店",
+            "description": null,
+            "system_flg": "0",
+            "showlist_flg": "1",
+            "order": "0",
+            "options": {
+                "icon": "fa-building",
+                "revision_flg": "1",
+                "one_record_flg": "0",
+                "comment_flg": "1",
+                "search_enabled": "1"
+            },
+            "custom_columns": [
+                {
+                    "column_name": "agency_code",
+                    "column_view_name": "代理店コード",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "0",
+                    "order": "0",
+                    "options": {
+                        "required": 1,
+                        "index_enabled": 1,
+                        "freeword_search": 1,
+                        "available_characters": [
+                            "lower",
+                            "upper",
+                            "number",
+                            "hyphen_underscore"
+                        ],
+                        "select_import_table_name": null,
+                        "select_import_column_name": null,
+                        "select_export_table_name": null,
+                        "select_export_column_name": null
+                    }
+                },
+                {
+                    "column_name": "agency_name",
+                    "column_view_name": "代理店名",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "0",
+                    "order": "0",
+                    "options": {
+                        "required": 1,
+                        "index_enabled": 1,
+                        "freeword_search": 1,
+                        "select_import_table_name": null,
+                        "select_import_column_name": null,
+                        "select_export_table_name": null,
+                        "select_export_column_name": null
+                    }
+                },
+                {
+                    "column_name": "syubetu",
+                    "column_view_name": "種別",
+                    "column_type": "select",
+                    "description": null,
+                    "system_flg": "0",
+                    "order": "0",
+                    "options": {
+                        "required": "1",
+                        "index_enabled": "1",
+                        "freeword_search": "0",
+                        "unique": "0",
+                        "init_only": "0",
+                        "select_item": "専業法人\r\n副業法人\r\n専業個人\r\n副業個人",
+                        "multiple_enabled": "0",
+                        "check_radio_enabled": "0",
+                        "free_input": "0",
+                        "select_import_table_name": null,
+                        "select_import_column_name": null,
+                        "select_export_table_name": null,
+                        "select_export_column_name": null
+                    }
+                },
+                {
+                    "column_name": "corpcode",
+                    "column_view_name": "法人番号",
+                    "column_type": "text",
+                    "description": null,
+                    "system_flg": "0",
+                    "order": "0",
+                    "options": {
+                        "required": "0",
+                        "index_enabled": "0",
+                        "freeword_search": "0",
+                        "unique": "0",
+                        "init_only": "0",
+                        "string_length": "256",
+                        "available_characters": [],
+                        "suggest_input": "0",
+                        "select_import_table_name": null,
+                        "select_import_column_name": null,
+                        "select_export_table_name": null,
+                        "select_export_column_name": null
+                    }
+                },
+                {
+                    "column_name": "tantosha",
+                    "column_view_name": "担当者",
+                    "column_type": "user",
+                    "description": null,
+                    "system_flg": "0",
+                    "order": "0",
+                    "options": {
+                        "required": "0",
+                        "index_enabled": "1",
+                        "freeword_search": "0",
+                        "unique": "0",
+                        "init_only": "0",
+                        "select_load_ajax": "0",
+                        "multiple_enabled": "0",
+                        "showing_all_user_organizations": "0",
+                        "select_import_table_name": null,
+                        "select_import_column_name": null,
+                        "select_export_table_name": null,
+                        "select_export_column_name": null
+                    }
+                },
+                {
+                    "column_name": "Incentive",
+                    "column_view_name": "インセンティブレート",
+                    "column_type": "integer",
+                    "description": null,
+                    "system_flg": "0",
+                    "order": "0",
+                    "options": {
+                        "required": "0",
+                        "index_enabled": "0",
+                        "freeword_search": "0",
+                        "unique": "0",
+                        "init_only": "0",
+                        "number_min": "0",
+                        "number_max": "100",
+                        "number_format": "0",
+                        "updown_button": "0",
+                        "select_import_table_name": null,
+                        "select_import_column_name": null,
+                        "select_export_table_name": null,
+                        "select_export_column_name": null
+                    }
+                }
+            ],
+            "custom_column_multisettings": [
+                {
+                    "suuid": "1b7a86e4ccdc6f49934c",
+                    "multisetting_type": "2",
+                    "options": {
+                        "unique1_table_name": null,
+                        "unique1_column_name": null,
+                        "unique2_table_name": null,
+                        "unique2_column_name": null,
+                        "unique3_table_name": null,
+                        "unique3_column_name": null,
+                        "compare_column1_table_name": null,
+                        "compare_column1_column_name": null,
+                        "compare_column2_table_name": null,
+                        "compare_column2_column_name": null,
+                        "share_table_name": null,
+                        "share_column_name": null,
+                        "table_label_table_name": "agency",
+                        "table_label_column_name": "agency_name"
+                    },
+                    "priority": "1",
+                    "share_trigger_type": null,
+                    "share_permission": null
+                }
+            ]
+        }
+    ],
+    "custom_relations": [],
+    "custom_forms": [
+        {
+            "suuid": "d99995ad6adbd85922de",
+            "form_view_name": "フォーム",
+            "default_flg": "1",
+            "options": {
+                "form_label_type": "horizontal",
+                "show_grid_type": "grid"
+            },
+            "custom_form_blocks": [
+                {
+                    "form_block_view_name": null,
+                    "form_block_type": "0",
+                    "available": "1",
+                    "options": [],
+                    "custom_form_columns": [
+                        {
+                            "suuid": "0976e10b2e92e76b98fa",
+                            "form_column_type": "0",
+                            "row_no": "1",
+                            "column_no": "1",
+                            "width": "2",
+                            "options": {
+                                "changedata_column_table_name": null,
+                                "changedata_column_name": null,
+                                "changedata_target_table_name": null,
+                                "changedata_target_column_name": null,
+                                "relation_filter_target_table_name": null,
+                                "relation_filter_target_column_name": null
+                            },
+                            "order": "1",
+                            "form_column_target_name": "agency_code"
+                        },
+                        {
+                            "suuid": "5148600bff38fbd813a5",
+                            "form_column_type": "0",
+                            "row_no": "1",
+                            "column_no": "1",
+                            "width": "2",
+                            "options": {
+                                "changedata_column_table_name": null,
+                                "changedata_column_name": null,
+                                "changedata_target_table_name": null,
+                                "changedata_target_column_name": null,
+                                "relation_filter_target_table_name": null,
+                                "relation_filter_target_column_name": null
+                            },
+                            "order": "2",
+                            "form_column_target_name": "agency_name"
+                        },
+                        {
+                            "suuid": "f988e2469031a6100917",
+                            "form_column_type": "0",
+                            "row_no": "1",
+                            "column_no": "1",
+                            "width": "2",
+                            "options": {
+                                "changedata_column_table_name": null,
+                                "changedata_column_name": null,
+                                "changedata_target_table_name": null,
+                                "changedata_target_column_name": null,
+                                "relation_filter_target_table_name": null,
+                                "relation_filter_target_column_name": null
+                            },
+                            "order": "3",
+                            "form_column_target_name": "syubetu"
+                        },
+                        {
+                            "suuid": "3b90cf22ae0cae817c42",
+                            "form_column_type": "0",
+                            "row_no": "1",
+                            "column_no": "1",
+                            "width": "2",
+                            "options": {
+                                "changedata_column_table_name": null,
+                                "changedata_column_name": null,
+                                "changedata_target_table_name": null,
+                                "changedata_target_column_name": null,
+                                "relation_filter_target_table_name": null,
+                                "relation_filter_target_column_name": null
+                            },
+                            "order": "4",
+                            "form_column_target_name": "corpcode"
+                        },
+                        {
+                            "suuid": "28d4aa7a6b5cb1fd18b5",
+                            "form_column_type": "0",
+                            "row_no": "1",
+                            "column_no": "1",
+                            "width": "2",
+                            "options": {
+                                "changedata_column_table_name": null,
+                                "changedata_column_name": null,
+                                "changedata_target_table_name": null,
+                                "changedata_target_column_name": null,
+                                "relation_filter_target_table_name": null,
+                                "relation_filter_target_column_name": null
+                            },
+                            "order": "5",
+                            "form_column_target_name": "tantosha"
+                        },
+                        {
+                            "suuid": "e9c8a04556a7051de69c",
+                            "form_column_type": "0",
+                            "row_no": "1",
+                            "column_no": "1",
+                            "width": "2",
+                            "options": {
+                                "form_column_view_name": "インセンティブレート",
+                                "field_label_type": "form_default",
+                                "required": "0",
+                                "default": "",
+                                "help": "",
+                                "changedata_column_table_name": null,
+                                "changedata_column_name": null,
+                                "changedata_target_table_name": null,
+                                "changedata_target_column_name": null,
+                                "relation_filter_target_table_name": null,
+                                "relation_filter_target_column_name": null
+                            },
+                            "order": "6",
+                            "form_column_target_name": "Incentive"
+                        }
+                    ],
+                    "form_block_target_table_name": "agency"
+                }
+            ],
+            "table_name": "agency"
+        }
+    ],
+    "custom_views": [
+        {
+            "suuid": "3eaa46fa146196b5a211",
+            "view_type": "0",
+            "view_kind_type": "9",
+            "view_view_name": "全件ビュー",
+            "default_flg": "1",
+            "options": {
+                "pager_count": "0",
+                "use_view_infobox": "0"
+            },
+            "custom_options": null,
+            "custom_view_columns": [
+                {
+                    "suuid": "af210e9049bb2294f56c",
+                    "view_column_type": "1",
+                    "order": "10",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "agency",
+                    "view_column_target_name": "id",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "11196efbd6fc79c1c693",
+                    "view_column_type": "0",
+                    "order": "20",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "agency",
+                    "view_column_target_name": "agency_code",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "b38802a5e4be264a6c17",
+                    "view_column_type": "0",
+                    "order": "30",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "agency",
+                    "view_column_target_name": "agency_name",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "36f4262f77d71a5da794",
+                    "view_column_type": "0",
+                    "order": "40",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "agency",
+                    "view_column_target_name": "syubetu",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "bdf0ccd2f6a15d4c8e0a",
+                    "view_column_type": "0",
+                    "order": "50",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "agency",
+                    "view_column_target_name": "tantosha",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "a8682a4ab3e51122e9d8",
+                    "view_column_type": "1",
+                    "order": "60",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "agency",
+                    "view_column_target_name": "created_at",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                },
+                {
+                    "suuid": "6f072a973ea35c49e612",
+                    "view_column_type": "1",
+                    "order": "70",
+                    "options": [],
+                    "view_column_name": null,
+                    "view_column_end_date": null,
+                    "view_column_color": null,
+                    "view_column_font_color": null,
+                    "sort_order": null,
+                    "sort_type": null,
+                    "view_column_table_name": "agency",
+                    "view_column_target_name": "updated_at",
+                    "view_pivot_table_name": null,
+                    "view_pivot_column_name": null
+                }
+            ],
+            "custom_view_filters": [],
+            "custom_view_sorts": [],
+            "custom_view_summaries": [],
+            "table_name": "agency"
+        }
+    ],
+    "custom_copies": []
+}
