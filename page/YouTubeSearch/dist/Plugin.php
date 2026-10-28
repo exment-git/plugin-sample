@@ -2,8 +2,8 @@
 
 namespace App\Plugins\YouTubeSearch;
 
-use Encore\Admin\Form;
-use Encore\Admin\Widgets\Box;
+use ExmentAdminCore\Admin\Form;
+use ExmentAdminCore\Admin\Widgets\Box;
 use Exceedone\Exment\Model\CustomTable;
 use Exceedone\Exment\Services\Plugin\PluginPageBase;
 use GuzzleHttp\Client;

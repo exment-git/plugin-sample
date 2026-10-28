@@ -3,8 +3,8 @@
 namespace App\Plugins\WordPressPost;
 
 use Exceedone\Exment\Services\Plugin\PluginCrudBase;
-use Encore\Admin\Widgets\Form as WidgetForm;
-use Encore\Admin\Widgets\Box;
+use ExmentAdminCore\Admin\Widgets\Form as WidgetForm;
+use ExmentAdminCore\Admin\Widgets\Box;
 use Illuminate\Support\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
 use GuzzleHttp\Client;

@@ -33,10 +33,10 @@
 php artisan exment:batch 1
 
 # plugin_name(プラグイン名)指定
-php artisan exment:batch --name=harddelete_data
+php artisan exment:batch --name=PluginSyncBatch
 
 # uuid指定
-php artisan exment:batch --uuid=b5c0a5d2-2716-4161-98d0-b490c1ebc521
+php artisan exment:batch --uuid=cd6a8de4-3ad8-484d-bc8e-75d7574ed5d3
 ~~~  
 
 ## 権限設定

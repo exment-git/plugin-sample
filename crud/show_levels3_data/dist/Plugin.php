@@ -3,7 +3,7 @@
 namespace App\Plugins\ShowLevels3Data;
 
 use Exceedone\Exment\Services\Plugin\PluginCrudBase;
-use Encore\Admin\Widgets\Form as WidgetForm;
+use ExmentAdminCore\Admin\Widgets\Form as WidgetForm;
 use Illuminate\Support\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Exceedone\Exment\Model\CustomColumn;

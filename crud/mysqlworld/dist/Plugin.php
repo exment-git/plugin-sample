@@ -2,8 +2,8 @@
 
 namespace App\Plugins\MySQLWorld;
 
-use Encore\Admin\Widgets\Grid\Grid;
-use Encore\Admin\Widgets\Form;
+use ExmentAdminCore\Admin\Widgets\Grid\Grid;
+use ExmentAdminCore\Admin\Widgets\Form;
 use Exceedone\Exment\Services\Plugin\PluginCrudBase;
 use Illuminate\Support\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;

@@ -2,11 +2,11 @@
 
 namespace App\Plugins\SystemTableColumnList;
 
-use Encore\Admin\Widgets\Box;
-use Encore\Admin\Widgets\Table;
+use ExmentAdminCore\Admin\Widgets\Box;
+use ExmentAdminCore\Admin\Widgets\Table;
 use Exceedone\Exment\Services\Plugin\PluginPageBase;
 use Exceedone\Exment\Model\CustomTable;
-use Encore\Admin\Widgets\Form as WidgetForm;
+use ExmentAdminCore\Admin\Widgets\Form as WidgetForm;
 use Exceedone\Exment\Enums\ColumnType;
 
 class Plugin extends PluginPageBase
